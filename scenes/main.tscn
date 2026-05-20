@@ -1,0 +1,360 @@
+[gd_scene format=3 uid="uid://1b047a1tjvpa"]
+
+[ext_resource type="Theme" uid="uid://du6g7oi1d04kc" path="res://gui/theme/gui_theme.tres" id="1_o5qli"]
+[ext_resource type="Script" uid="uid://dp5lhhnrycoys" path="res://scripts/Main.cs" id="2_0wfyh"]
+[ext_resource type="StyleBox" uid="uid://op3r4a81hmrv" path="res://gui/theme/frame.tres" id="3_sugp2"]
+
+[node name="Main" type="Panel" unique_id=2096702491 node_paths=PackedStringArray("saveButton", "loadButton", "clearButton", "channelOption", "defaultValEd", "mainTR", "subTR", "dialog")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_o5qli")
+script = ExtResource("2_0wfyh")
+saveButton = NodePath("MarginContainer/HBoxContainer/VBoxContainer1/Button")
+loadButton = [NodePath("MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer1/Button1"), NodePath("MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer2/Button1"), NodePath("MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer3/Button1"), NodePath("MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer4/Button1")]
+clearButton = [NodePath("MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer1/Button2"), NodePath("MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer2/Button2"), NodePath("MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer3/Button2"), NodePath("MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer4/Button2")]
+channelOption = [NodePath("MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer1/OptionButton"), NodePath("MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer2/OptionButton"), NodePath("MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer3/OptionButton"), NodePath("MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer4/OptionButton")]
+defaultValEd = [NodePath("MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer1/SpinBox"), NodePath("MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer2/SpinBox"), NodePath("MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer3/SpinBox"), NodePath("MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer4/SpinBox")]
+mainTR = NodePath("MarginContainer/HBoxContainer/VBoxContainer1/ColorRect/TextureRect")
+subTR = [NodePath("MarginContainer/HBoxContainer/VBoxContainer2/ColorRect1/TextureRect1"), NodePath("MarginContainer/HBoxContainer/VBoxContainer2/ColorRect2/TextureRect1"), NodePath("MarginContainer/HBoxContainer/VBoxContainer2/ColorRect3/TextureRect1"), NodePath("MarginContainer/HBoxContainer/VBoxContainer2/ColorRect4/TextureRect1")]
+dialog = NodePath("FileDialog")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=524227820]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=2138898429]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="VBoxContainer1" type="VBoxContainer" parent="MarginContainer/HBoxContainer" unique_id=2091697587]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 10
+
+[node name="ColorRect" type="Panel" parent="MarginContainer/HBoxContainer/VBoxContainer1" unique_id=1975983859]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = ExtResource("3_sugp2")
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/HBoxContainer/VBoxContainer1/ColorRect" unique_id=1009133089]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Button" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer1" unique_id=691959712]
+custom_minimum_size = Vector2(100, 35)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Save"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/HBoxContainer" unique_id=920377727]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 10
+
+[node name="ColorRect1" type="Panel" parent="MarginContainer/HBoxContainer/VBoxContainer2" unique_id=1996787186]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = ExtResource("3_sugp2")
+
+[node name="TextureRect1" type="TextureRect" parent="MarginContainer/HBoxContainer/VBoxContainer2/ColorRect1" unique_id=1574306396]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+expand_mode = 1
+stretch_mode = 5
+
+[node name="HBoxContainer1" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer2" unique_id=445346123]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer1" unique_id=509609015]
+self_modulate = Color(1, 0, 0, 1)
+layout_mode = 2
+text = "R:O"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Button1" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer1" unique_id=19887821]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Load"
+
+[node name="Button2" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer1" unique_id=1410669980]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "X"
+
+[node name="Control" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer1" unique_id=290937242]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label3" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer1" unique_id=383416237]
+self_modulate = Color(0.7, 0.7, 0.7, 1)
+layout_mode = 2
+text = "use"
+
+[node name="OptionButton" type="OptionButton" parent="MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer1" unique_id=417338061]
+layout_mode = 2
+selected = 0
+item_count = 4
+popup/item_0/text = "R"
+popup/item_0/id = 0
+popup/item_1/text = "G"
+popup/item_1/id = 1
+popup/item_2/text = "B"
+popup/item_2/id = 2
+popup/item_3/text = "A"
+popup/item_3/id = 3
+
+[node name="Label2" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer1" unique_id=1283387508]
+self_modulate = Color(0.7, 0.7, 0.7, 1)
+layout_mode = 2
+text = ", else"
+
+[node name="SpinBox" type="SpinBox" parent="MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer1" unique_id=2130641513]
+layout_mode = 2
+max_value = 1.0
+step = 0.1
+
+[node name="ColorRect2" type="Panel" parent="MarginContainer/HBoxContainer/VBoxContainer2" unique_id=158013295]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = ExtResource("3_sugp2")
+
+[node name="TextureRect1" type="TextureRect" parent="MarginContainer/HBoxContainer/VBoxContainer2/ColorRect2" unique_id=1391385699]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+expand_mode = 1
+stretch_mode = 5
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer2" unique_id=686165396]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer2" unique_id=1565431627]
+self_modulate = Color(0, 1, 0, 1)
+layout_mode = 2
+text = "G:R"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Button1" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer2" unique_id=460116176]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Load"
+
+[node name="Button2" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer2" unique_id=1455455817]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "X"
+
+[node name="Control" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer2" unique_id=2074430528]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label3" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer2" unique_id=1928173114]
+self_modulate = Color(0.7, 0.7, 0.7, 1)
+layout_mode = 2
+text = "use"
+
+[node name="OptionButton" type="OptionButton" parent="MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer2" unique_id=919974562]
+layout_mode = 2
+selected = 0
+item_count = 4
+popup/item_0/text = "R"
+popup/item_0/id = 0
+popup/item_1/text = "G"
+popup/item_1/id = 1
+popup/item_2/text = "B"
+popup/item_2/id = 2
+popup/item_3/text = "A"
+popup/item_3/id = 3
+
+[node name="Label2" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer2" unique_id=240745157]
+self_modulate = Color(0.7, 0.7, 0.7, 1)
+layout_mode = 2
+text = ", else"
+
+[node name="SpinBox" type="SpinBox" parent="MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer2" unique_id=125014720]
+layout_mode = 2
+max_value = 1.0
+step = 0.1
+
+[node name="ColorRect3" type="Panel" parent="MarginContainer/HBoxContainer/VBoxContainer2" unique_id=1502762230]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = ExtResource("3_sugp2")
+
+[node name="TextureRect1" type="TextureRect" parent="MarginContainer/HBoxContainer/VBoxContainer2/ColorRect3" unique_id=891649686]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+expand_mode = 1
+stretch_mode = 5
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer2" unique_id=1982875341]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer3" unique_id=1493387668]
+self_modulate = Color(0, 0.35312486, 1, 1)
+layout_mode = 2
+text = "B:M"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Button1" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer3" unique_id=921604664]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Load"
+
+[node name="Button2" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer3" unique_id=404884199]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "X"
+
+[node name="Control" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer3" unique_id=2069040864]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label3" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer3" unique_id=1485548362]
+self_modulate = Color(0.7, 0.7, 0.7, 1)
+layout_mode = 2
+text = "use"
+
+[node name="OptionButton" type="OptionButton" parent="MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer3" unique_id=1426573144]
+layout_mode = 2
+selected = 0
+item_count = 4
+popup/item_0/text = "R"
+popup/item_0/id = 0
+popup/item_1/text = "G"
+popup/item_1/id = 1
+popup/item_2/text = "B"
+popup/item_2/id = 2
+popup/item_3/text = "A"
+popup/item_3/id = 3
+
+[node name="Label2" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer3" unique_id=116846604]
+self_modulate = Color(0.7, 0.7, 0.7, 1)
+layout_mode = 2
+text = ", else"
+
+[node name="SpinBox" type="SpinBox" parent="MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer3" unique_id=1310872935]
+layout_mode = 2
+max_value = 1.0
+step = 0.1
+
+[node name="ColorRect4" type="Panel" parent="MarginContainer/HBoxContainer/VBoxContainer2" unique_id=568634530]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = ExtResource("3_sugp2")
+
+[node name="TextureRect1" type="TextureRect" parent="MarginContainer/HBoxContainer/VBoxContainer2/ColorRect4" unique_id=1491654214]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+expand_mode = 1
+stretch_mode = 5
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer2" unique_id=2118455527]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer4" unique_id=1012157265]
+self_modulate = Color(0.7, 0.7, 0.7, 1)
+layout_mode = 2
+text = "A:H"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Button1" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer4" unique_id=1493884961]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Load"
+
+[node name="Button2" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer4" unique_id=194795356]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "X"
+
+[node name="Control" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer4" unique_id=44580023]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label3" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer4" unique_id=2053388754]
+self_modulate = Color(0.7, 0.7, 0.7, 1)
+layout_mode = 2
+text = "use"
+
+[node name="OptionButton" type="OptionButton" parent="MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer4" unique_id=416682788]
+layout_mode = 2
+selected = 0
+item_count = 4
+popup/item_0/text = "R"
+popup/item_0/id = 0
+popup/item_1/text = "G"
+popup/item_1/id = 1
+popup/item_2/text = "B"
+popup/item_2/id = 2
+popup/item_3/text = "A"
+popup/item_3/id = 3
+
+[node name="Label2" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer4" unique_id=455416235]
+self_modulate = Color(0.7, 0.7, 0.7, 1)
+layout_mode = 2
+text = ", else"
+
+[node name="SpinBox" type="SpinBox" parent="MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer4" unique_id=1751427291]
+layout_mode = 2
+max_value = 1.0
+step = 0.1
+value = 1.0
+
+[node name="FileDialog" type="FileDialog" parent="." unique_id=1104379205]
+initial_position = 2
+size = Vector2i(700, 400)
+force_native = true
+access = 2
