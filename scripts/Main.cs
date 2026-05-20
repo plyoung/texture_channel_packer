@@ -63,6 +63,8 @@ public partial class Main : Panel
         dialog.Filters = ["*.bmp,*.dds,*.exr,*.jpg,*.jpeg,*.ktx,*.png,*.svg,*.tga,*.webp;Image Files"];
         dialog.FileMode = FileDialog.FileModeEnum.OpenFile;
         dialog.DisplayMode = FileDialog.DisplayModeEnum.List;
+        dialog.UseNativeDialog = true;
+        dialog.ForceNative = true;
         dialog.Popup();
     }
 
@@ -73,6 +75,8 @@ public partial class Main : Panel
         dialog.Filters = ["*.png;Image File"];
         dialog.FileMode = FileDialog.FileModeEnum.SaveFile;
         dialog.DisplayMode = FileDialog.DisplayModeEnum.List;
+        dialog.UseNativeDialog = true;
+        dialog.ForceNative = true;
         dialog.Popup();
     }
 
